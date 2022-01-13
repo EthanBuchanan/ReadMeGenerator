@@ -1,78 +1,26 @@
-const inquirer = require("inquirer")
-const fs = require("fs");
+# asdf
 
-inquirer.prompt([
-    {
-        type: "input",
-        message: "What is the title of your project?",
-        name: "title"
-    },
-    {
-        type: "input",
-        message: `Provide a short description explaining the what, why, and how of your project. `,
-        name: "description"
-    },
-    {
-        type: "input",
-        message: `What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.`,
-        name: "installation"
-    },
-    {
-        type: "input",
-        message: `Provide instructions and examples for use.`,
-        name: "usage"
-    },
-    {
-        type: "input",
-        message: `Would you like to use the MIT license or the GNU license? To answer please enter an "M" for MIT or a "G" for GNU.`,
-        name: "licensing"
-    },
-    {
-        type: "input",
-        message: `Provide instructions for how a user can contribute.`,
-        name: "contributing"
-    },
-    {
-        type: "input",
-        message: `Provide instructions testing.`,
-        name: "testing"
-    },
-    {
-        type: "input",
-        message: `What is your GitHub username?`,
-        name: "github"
-    },
-    {
-        type: "input",
-        message: `What is your Email`,
-        name: "email"
-    }
-])
-.then((response) => {
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-    const mitLicense = `MIT License
+## Description
+asdf
 
-    Copyright (c) [year] [fullname]
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Installation
+asdf
+
+## Usage
+asf
     
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-    
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-    
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.`
-
-    const gnuLicense = `GNU GENERAL PUBLIC LICENSE
+## License
+GNU GENERAL PUBLIC LICENSE
     Version 3, 29 June 2007
 
 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
@@ -727,11 +675,11 @@ If the program does terminal interaction, make it output a short
 notice like this when it starts in an interactive mode:
 
 <program>  Copyright (C) <year>  <name of author>
-This program comes with ABSOLUTELY NO WARRANTY; for details type \`show w'.
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
 This is free software, and you are welcome to redistribute it
-under certain conditions; type \`show c' for details.
+under certain conditions; type `show c' for details.
 
-The hypothetical commands \`show w' and \`show c' should show the appropriate
+The hypothetical commands `show w' and `show c' should show the appropriate
 parts of the General Public License.  Of course, your program's commands
 might be different; for a GUI interface, you would use an "about box".
 
@@ -745,46 +693,15 @@ into proprietary programs.  If your program is a subroutine library, you
 may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
-<https://www.gnu.org/licenses/why-not-lgpl.html>.`
-
-
-    const data = 
-
-    `# ${response.title}
-
-${response.licensing[0].toUpperCase()[0] === "M" ?"[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)":"[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"}
-
-## Description
-${response.description}
-
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
-
-## Installation
-${response.installation}
-
-## Usage
-${response.usage}
-    
-## License
-${response.licensing[0].toUpperCase()[0] === "M" ?mitLicense: gnuLicense}
+<https://www.gnu.org/licenses/why-not-lgpl.html>.
 
 ## Contributing
-${response.contributing}    
+asdf    
     
 ## Tests
-${response.testing}
+asdf
 
 ## Questions
 If you have questions reach out to me at:
-Github:  https://github.com/${response.github}
-Email:   ${response.email}
-`
-
-    fs.writeFile("./Output/README.md",data,()=> {});
-})
+Github:  https://github.com/asfd
+Email:   asdf

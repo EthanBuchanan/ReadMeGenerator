@@ -43,8 +43,8 @@ MIT License
 ## Contributing
 This project is going to be pretty done once I've made my last commit. If you see potential in the idea you should simply fork it and make your changes in your own account    
     
-## Tests
-
+## Video 
+Here's a quick video showing the project working: https://watch.screencastify.com/v/2ZM2eLYki0rajYWCB3xm
 
 ## Questions
 If you have questions reach out to me at:
